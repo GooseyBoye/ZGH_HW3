@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ZGH_HW3/static/css/main.01e685fb.css",
+    "main.js": "/ZGH_HW3/static/js/main.fb5eb095.js",
+    "static/js/787.40bd3877.chunk.js": "/ZGH_HW3/static/js/787.40bd3877.chunk.js",
+    "index.html": "/ZGH_HW3/index.html",
+    "main.01e685fb.css.map": "/ZGH_HW3/static/css/main.01e685fb.css.map",
+    "main.fb5eb095.js.map": "/ZGH_HW3/static/js/main.fb5eb095.js.map",
+    "787.40bd3877.chunk.js.map": "/ZGH_HW3/static/js/787.40bd3877.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01e685fb.css",
+    "static/js/main.fb5eb095.js"
+  ]
+}
