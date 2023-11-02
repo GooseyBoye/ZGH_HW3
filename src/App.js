@@ -35,49 +35,49 @@ class App extends Component {
     this.setState({currentUser: newUser})
   } 
 
-//   addCredit = (newCredit) => {
-//     this.setState(prevState => ({
-//       creditList: [...prevState.creditList, newCredit],
-//       accountBalance: (parseFloat(prevState.accountBalance) + parseFloat(newCredit.amount)).toFixed(2)
-//     }));
+  addCredit = (newCredit) => {
+    this.setState(prevState => ({
+      creditList: [...prevState.creditList, newCredit],
+      accountBalance: (parseFloat(prevState.accountBalance) + parseFloat(newCredit.amount)).toFixed(2)
+    }));
 
-//   }
+  }
 
-//   addDebit = (newDebit) => {
-//     this.setState(prevState => ({
-//       debitList: [...prevState.debitList, newDebit],
-//       accountBalance: (parseFloat(prevState.accountBalance) - parseFloat(newDebit.amount)).toFixed(2)
-//     }));
-//   };
+  addDebit = (newDebit) => {
+    this.setState(prevState => ({
+      debitList: [...prevState.debitList, newDebit],
+      accountBalance: (parseFloat(prevState.accountBalance) - parseFloat(newDebit.amount)).toFixed(2)
+    }));
+  };
 
-//    componentDidMount() {
-//     //get credits
-//     fetch("https://johnnylaicode.github.io/api/credits.json")
-//         .then((res) => res.json())
-//         .then((creditData) => {
+   componentDidMount() {
+    //get credits
+    fetch("https://johnnylaicode.github.io/api/credits.json")
+        .then((res) => res.json())
+        .then((creditData) => {
 
-//           const totalCredits = creditData.reduce((acc, credit) => acc + parseFloat(credit.amount), 0);
-//           const totalBalance = this.state.accountBalance + totalCredits;
+          const totalCredits = creditData.reduce((acc, credit) => acc + parseFloat(credit.amount), 0);
+          const totalBalance = this.state.accountBalance + totalCredits;
 
-//             this.setState({
-//                 creditList: creditData,
-//                 accountBalance: totalBalance
-//             });
-//         });
+            this.setState({
+                creditList: creditData,
+                accountBalance: totalBalance
+            });
+        });
 
-//       fetch("https://johnnylaicode.github.io/api/debits.json")
-//       .then((res) => res.json())
-//       .then((debitData) => {
+      fetch("https://johnnylaicode.github.io/api/debits.json")
+      .then((res) => res.json())
+      .then((debitData) => {
         
-//         const totalDebits = debitData.reduce((acc, debit) => acc + parseFloat(debit.amount), 0);
-//         const totalBalance = this.state.accountBalance + totalDebits;
+        const totalDebits = debitData.reduce((acc, debit) => acc + parseFloat(debit.amount), 0);
+        const totalBalance = this.state.accountBalance + totalDebits;
 
-//           this.setState({
-//               debitList: debitData,
-//               accountBalance: this.state.accountBalance - totalDebits
-//           });
-//       });
-// }
+          this.setState({
+              debitList: debitData,
+              accountBalance: this.state.accountBalance - totalDebits
+          });
+      });
+}
 
   // Create Routes and React elements to be rendered using React components
   render() {  
