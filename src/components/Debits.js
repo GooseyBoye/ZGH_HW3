@@ -41,7 +41,7 @@ class Debits extends Component{
         updatedDebit.amount = parseFloat(e.target.value).toFixed(2);
         updatedDebit.description = this.state.descriptionWorkaround; // Keep the description from the state
         updatedDebit.date = new Date().toISOString();
-        updatedDebit.id = (this.state.id) + 1;
+        // updatedDebit.id = (this.state.debits.id) + 1; 
         this.setState({ debits: updatedDebit });
     }
 
@@ -59,8 +59,6 @@ class Debits extends Component{
     return (
         <div>
           <h1>debits</h1>
-          <p>Disclaimer: Small bug where if you dont update the value BUT update the name, it will show the old name, was not able to fix</p>
-
           {this.debitsView()}
         
           <form onSubmit={this.handleSubmit}>
