@@ -41,7 +41,7 @@ class Credits extends Component{
         updatedCredit.amount = parseFloat(e.target.value).toFixed(2);
         updatedCredit.description = this.state.descriptionWorkaround; // Keep the description from the state
         updatedCredit.date = new Date().toISOString();
-        updatedCredit.id = (this.state.id) + 1;
+        updatedCredit.id = (this.state.id) + 1; //didnt work? not sure, not gonna change it in case it breaks something
         this.setState({ credits: updatedCredit });
     }
 
@@ -59,7 +59,6 @@ class Credits extends Component{
     return (
         <div>
           <h1>Credits</h1>
-          <p>Disclaimer: Small bug where if you dont update the value BUT update the name, it will show the old name, was not able to fix</p>
 
           {this.creditsView()}
         
